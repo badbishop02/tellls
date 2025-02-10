@@ -1,7 +1,11 @@
 import React from "react";
+
 import type { Metadata } from "next";
+
 import { Inter } from "next/font/google";
+
 import { ClerkProvider } from "@clerk/nextjs";
+
 import { dark } from "@clerk/themes";
 
 import "../globals.css";
@@ -9,8 +13,9 @@ import "../globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Tellls",
-  description: "Telll it out",
+  title: "Tellls - Connect and Create",
+  description: "Tellls is a platform for creating organizations, socializing in groups, and sharing experiences.",
+  keywords: ["Tellls", "socialize", "create organizations", "group discussions", "online community", "events", "collaboration"],
 };
 
 export default function RootLayout({
