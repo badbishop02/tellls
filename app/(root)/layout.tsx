@@ -1,10 +1,15 @@
 import React from "react";
+
 import type { Metadata } from "next";
+
 import { Inter } from "next/font/google";
+
 import { ClerkProvider } from "@clerk/nextjs";
+
 import { dark } from "@clerk/themes";
 
 import "../globals.css";
+
 import LeftSidebar from "@/components/shared/LeftSidebar";
 import Bottombar from "@/components/shared/Bottombar";
 import RightSidebar from "@/components/shared/RightSidebar";
@@ -14,7 +19,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Tellls",
-  description: "Telll it out",
+  description: "Tell it out - a platform for sharing stories and experiences.",
+  keywords: ["stories", "sharing", "community", "user experiences", "Tellls"],
 };
 
 export default function RootLayout({
@@ -31,7 +37,6 @@ export default function RootLayout({
       <html lang='en'>
         <body className={inter.className}>
           <Topbar />
-
           <main className='flex flex-row'>
             <LeftSidebar />
             <section className='main-container'>
@@ -40,7 +45,6 @@ export default function RootLayout({
             {/* @ts-ignore */}
             <RightSidebar />
           </main>
-
           <Bottombar />
         </body>
       </html>
